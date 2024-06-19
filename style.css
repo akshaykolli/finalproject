@@ -1,0 +1,367 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s;
+    /* Added box shadow and font size for depth and visual interest */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+}
+
+header h1 {
+    background-color: #0073e6; /* Add background color */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-size: 36px; /* Increase font size */
+    font-weight: bold; /* Add bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow for depth */
+}
+
+header:hover {
+    background-color: #005bb5;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the navigation items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 5px; /* Adjust spacing between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 8px 12px; /* Adjust padding to maintain button size */
+    font-size: 16px; /* Adjust font size for better readability */
+    border-radius: 5px;
+    background-color: #0073e6; /* Keep the background color */
+    color: white; /* Keep the text color */
+}
+
+nav ul li a:hover {
+    background-color: #005bb5;
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+h2 {
+    color: #0073e6;
+    transition: color 0.3s; /* Added transition for color change */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for depth */
+    text-align: center; /* Center headings */
+}
+
+h2:hover {
+    color: #005bb5; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add bottom border to table cells */
+    border-right: 1px solid #ddd; /* Add right border to table cells */
+}
+
+table th:first-child, table td:first-child {
+    border-left: 1px solid #ddd; /* Add left border to first column cells */
+}
+
+table th {
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Diagrams Styles */
+.diagram-headings {
+    text-align: center; /* Center headings */
+    margin-bottom: 10px; /* Space between heading and diagrams */
+}
+
+.diagrams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Add gap between images */
+    flex-wrap: wrap; /* Wrap diagrams on smaller screens */
+    flex-direction: column; /* Stack diagrams vertically */
+}
+
+.diagram-image {
+    width: 100%; /* Adjust to 100% for responsive design */
+    max-width: 600px; /* Set a maximum width */
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.diagram-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 768px) {
+    .diagram-headings {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .diagrams {
+        flex-direction: column; /* Stack diagrams vertically on smaller screens */
+    }
+
+    .diagram-image {
+        width: 100%; /* Ensure diagrams take full width on smaller screens */
+    }
+}
+
+.diagram-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Reveal Animation */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typewriter Effect */
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Enhanced Mouse Follow Animation */
+.mouse-follower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 115, 230, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+    z-index: 1001;
+    mix-blend-mode: difference;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s;
+    /* Added box shadow for depth */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #005bb5;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 768px) {
+    header, nav, main, footer {
+        margin: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .diagram-headings {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .diagrams {
+        flex-direction: column;
+    }
+
+    .diagram-image {
+        width: 100%;
+    }
+}
+
+#newegg-logo {
+    width: 120px; /* Adjust the width as needed */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    margin-left: 45px;
+}
+
+.buy-hardware-logo {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-right: 450px;
+    margin-top: -80px;
+}
+
+.buy-links {
+    display: flex;
+    justify-content: space-around; /* Evenly space items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Wrap items if they exceed the container width */
+    margin-top: 30px; /* Adjust margin as needed */
+}
+
+.buy-logo {
+    width: 200px; /* Set width of logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px; /* Adjust margin around logos */
+    transition: transform 0.3s ease-in-out; /* Add smooth scaling transition */
+}
+
+.buy-logo:hover {
+    transform: scale(1.1); /* Scale up on hover for interaction */
+}
+
+nav ul li details summary {
+    cursor: pointer;
+    outline: none;
+}
+
+nav ul li details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+nav ul li details[open] ul {
+    display: block;
+}
